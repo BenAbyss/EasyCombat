@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NPCBuilder">
+   <children>
+      <TextField fx:id="nameField" layoutX="28.0" layoutY="58.0" />
+      <Spinner fx:id="healthVal" layoutX="28.0" layoutY="111.0">
+         <valueFactory>
+            <SpinnerValueFactory.IntegerSpinnerValueFactory amountToStepBy="1" initialValue="5" max="1000" min="0" />
+         </valueFactory>
+      </Spinner>
+
+      <Label layoutX="28.0" layoutY="34.0" text="Name:" />
+      <Label layoutX="28.0" layoutY="94.0" text="Health:" />
+      <RadioButton fx:id="multiattackButton" layoutX="26.0" layoutY="282.0" mnemonicParsing="false" text="Multiattack" />
+      <Label layoutX="28.0" layoutY="155.0" text="Initiative Modifier:" />
+
+      <Spinner fx:id="initiativeVal" layoutX="28.0" layoutY="172.0">
+         <valueFactory>
+            <SpinnerValueFactory.IntegerSpinnerValueFactory amountToStepBy="1" initialValue="1" max="200" min="-200" />
+         </valueFactory>
+      </Spinner>
+
+      <Label layoutX="28.0" layoutY="215.0" text="Armour Class" />
+
+      <Spinner fx:id="armourClassVal" layoutX="25.0" layoutY="232.0">
+         <valueFactory>
+            <SpinnerValueFactory.IntegerSpinnerValueFactory amountToStepBy="1" initialValue="10" max="50" min="0" />
+         </valueFactory>
+      </Spinner>
+
+      <Button fx:id="createTemplate" layoutX="28.0" layoutY="313.0" mnemonicParsing="false" onAction="#onButtonClicked" prefHeight="59.0" prefWidth="160.0" text="Create Template" />
+      <Label layoutX="456.0" layoutY="34.0" text="Current Templates:" />
+      <ScrollPane layoutX="451.0" layoutY="51.0" prefHeight="334.0" prefWidth="135.0" style="-fx-border-color: black;" />
+      <Label layoutX="283.0" layoutY="30.0" prefHeight="25.0" prefWidth="53.0" text="Attacks">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox layoutX="234.0" layoutY="58.0" prefWidth="150.0" promptText="No attack selected" />
+      <Label layoutX="275.0" layoutY="94.0" text="Attack Name" />
+      <TextField layoutX="235.0" layoutY="111.0" />
+      <RadioButton layoutX="235.0" layoutY="147.0" mnemonicParsing="false" text="To Hit" />
+      <RadioButton layoutX="347.0" layoutY="147.0" mnemonicParsing="false" text="DC" />
+      <Spinner layoutX="235.0" layoutY="172.0" prefHeight="25.0" prefWidth="61.0" />
+      <Spinner layoutX="313.0" layoutY="172.0" prefHeight="25.0" prefWidth="61.0" />
+      <ComboBox layoutX="311.0" layoutY="203.0" prefHeight="25.0" prefWidth="109.0" promptText="Ability Score" />
+      <Label layoutX="222.0" layoutY="236.0" prefHeight="17.0" prefWidth="198.0" text="Note that either or both of these are required">
+         <font>
+            <Font name="System Italic" size="10.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
